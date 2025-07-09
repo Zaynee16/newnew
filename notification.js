@@ -1,4 +1,8 @@
 // script.js
+const sideBar = document.querySelector('.sidebar');
+const iconSideBar = document.querySelector('.icon-sidebar');
+const logoIcon = document.querySelectorAll('.logo-icon');
+
 const notifications = [
   {
     title: "Profile Incomplete",
@@ -25,6 +29,27 @@ const notifications = [
     message: "Reminder: Your order for John is due in 2 days.",
   },
 ];
+
+// Function to toggle Sidebar
+function toggleSidebar() {
+	if (sideBar.classList.contains('hidden')) {
+		sideBar.classList.remove('hidden');
+	} else {
+		sideBar.classList.add('hidden');
+	}
+
+	if (iconSideBar.classList.contains('hidden')) {
+		iconSideBar.classList.remove('hidden');
+	} else {
+		iconSideBar.classList.add('hidden');
+	}
+}
+// It's event listener
+logoIcon.forEach((logo) => {
+	logo.addEventListener('click', toggleSidebar);
+});
+
+
 
 function renderNotifications(filter = "all") {
   const list = document.getElementById("notificationList");
