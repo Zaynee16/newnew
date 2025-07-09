@@ -5,25 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CraftConnect Notifications</title>
     <link href="./notification.css" rel="stylesheet" />
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   </head>
+
   <body>
     <div class="container">
-      <aside class="sidebar">
-        <h2><span class="sp1">Craft</span><span class="sp2">Connect</span></h2>
-
-        <ul>
-          <li><span class="icon">🏠</span> Dashboard</li>
-          <li><span class="icon">💬</span> Message</li>
-          <li><span class="icon">📅</span> Booking</li>
-          <li><span class="icon">🖼️</span> Portfolio</li>
-          <li><span class="icon">⭐</span> Review</li>
-          <li><span class="icon">📊</span> Insight</li>
-        </ul>
-        <div class="bottom">
-          <div class="profile">👤 Profile</div>
-          <div class="notifications active">🔔 Notifications</div>
+          <!-- Sidebar -->
+    <div class="sidebar hidden">
+        <div class="logo">
+            <div class="nav-icon logo-icon" id="logo-icon"><i class="fa-solid fa-bars"></i></div>
+            <div class="logo-text">
+                <span class="logo-craft">Craft</span><span class="logo-connect">Connect</span>
+            </div>
+            
         </div>
-      </aside>
+
+        <nav class="nav">
+            <a href="dashboard.html" class="nav-item">
+                <div class="nav-icon"><i class="fa-solid fa-grip"></i></div>
+                <span>Dashboard</span>
+            </a>
+            <a href="messages.html" class="nav-item">
+                <div class="nav-icon"><i class="fa-solid fa-message"></i></div>
+                <span>Message</span>
+                <div class="notification-dot"></div>
+            </a>
+            <a href="#" class="nav-item active">
+                <div class="nav-icon"><i class="fa-solid fa-book"></i></div>
+                <span>Booking</span>
+            </a>
+            <a href="portfolio.html" class="nav-item">
+                <div class="nav-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <span>Portfolio</span>
+            </a>
+            <a href="reviews.html" class="nav-item">
+                <div class="nav-icon"><i class="fa-solid fa-star"></i></div>
+                <span>Review</span>
+            </a>
+            <a href="insights.html" class="nav-item">
+                <div class="nav-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <span>Insight</span>
+            </a>
+        </nav>
+
+        <div class="bottom-nav">
+            <a href="profile.html" class="nav-item">
+                <div class="nav-icon"><i class="fa-regular fa-circle-user"></i></i></div>
+                <span>Profile</span>
+            </a>
+            <a href="notification.html" class="nav-item">
+                <div class="nav-icon"><i class="fa-regular fa-bell"></i></div>
+                <span>Notifications</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="icon-sidebar ">
+        
+            <div class="icon top-icon">
+                <div class="nav-icon logo-icon" ><i class="fa-solid fa-bars"></i></div>
+                <a href="dashboard.html" class="nav-item"><i class="fa-solid fa-grip"></i></a>
+            <a href="messages.html" class="nav-item"><i class="fa-solid fa-message"></i></a>
+            <a href="#" class="nav-item active nav-item"><i class="fa-solid fa-book"></i></a>
+            <a href="portfolio.html" class="nav-item"><i class="fa-solid fa-briefcase"></i></a>
+            <a href="reviews.html" class="nav-item"><i class="fa-solid fa-star"></i></a>
+            <a href="insights.html" class="nav-item"><i class="fa-solid fa-chart-line"></i></a>
+            </div>
+
+            <div class="icon lower-icon">
+                <a href="profile.html" class="nav-item"><i class="fa-regular fa-circle-user"></i></a>
+                <a href="notification.html" class="nav-item"><i class="fa-regular fa-bell"></i></a>
+            </div>
+        </div>
 
       <main class="main-content">
         <header class="topbar">
