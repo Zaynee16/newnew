@@ -166,7 +166,7 @@ body {
   align-items: baseline;
 }
 
-.topbar .icons {
+/*.topbar .icons {
   display: flex;
   flex-direction: row;
 align-items: center;
@@ -177,6 +177,51 @@ align-items: center;
 .topbar .profile-pic {
   margin-left: 15px;
   cursor: pointer;
+}*/
+
+.topbar .icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end; /* Push icons to the right */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.topbar .icons span {
+  font-size: 1.2rem;
+  cursor:pointer;
+}
+
+.topbar .icons span:hover {
+  transform: scale(1.2);
+}
+
+.topbar .profile-pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.topbar .profile-pic:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+  .topbar .icons {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .topbar .icons span {
+    font-size: 1rem;
+  }
+
+  .topbar .profile-pic {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 .profile-style {

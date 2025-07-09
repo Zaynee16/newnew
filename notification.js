@@ -73,6 +73,22 @@ function renderNotifications(filter = "all") {
   });
 }
 
+document.querySelector('.icon-search').addEventListener('click', () => {
+  alert('Search activated 🔍');
+});
+
+document.querySelector('.icon-bell').addEventListener('click', () => {
+  alert('No new notifications 🛎️');
+});
+
+document.querySelector('.icon-settings').addEventListener('click', () => {
+  alert('Settings opened ⚙️');
+});
+
+document.querySelector('.profile-pic').addEventListener('click', () => {
+  alert('Profile page coming right up 👤');
+});
+
 function filterNotifications(type) {
   document
     .querySelectorAll(".tab")
