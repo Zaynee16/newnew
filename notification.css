@@ -200,6 +200,7 @@ align-items: center;
 
 .tab {
   padding: 8px 16px;
+  margin-top: 10px;
   margin-right: 10px;
   border: none;
   background: #ddd;
@@ -239,4 +240,33 @@ aside {
   font-family: sans-serif;
   color: #0f2521;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+	.sidebar {
+		width: 300px;
+		z-index: 1000;
+	}
+
+	.icons {
+		display: none;
+	}
+}
+
+@media (max-width: 530px) {
+	.sidebar {
+		width: 100%;
+		z-index: 1000;
+	}
+
+	.topbar .icons span {
+		display: none;
+	}
+}
+
+@media (max-width: 350px) {
+	.sidebar {
+		width: 100%;
+		z-index: 1000;
+	}
 }
