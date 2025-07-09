@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.sp1 {
+  color: #8638e5;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.sp2 {
+  color: green;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+/* .sp1 {
+  color: #8638e5;
+}
+
+.sp2 {
+  color: green;
+} */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  background-color: #ddd;
+  color: black;
+  margin: bold;
+  padding: 20px;
+  /* height: 100vh;*/
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.sidebar .active {
+  font-weight: bold;
+  color: #1abc9c;
+}
+
+.bottom {
+  margin-top: auto;
+}
+.bottom div {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.topbar .icons {
+  display: flex;
+  flex-direction: row;
+align-items: center;
+  justify-content: center;
+}
+
+.topbar .icons span,
+.topbar .profile-pic {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.profile-style {
+  display: flex;
+}
+
+.profile-pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.notifications h1 {
+  margin-top: 20px;
+  padding: 0;
+}
+
+.tabs {
+  margin: 20px 0;
+}
+
+.tab {
+  padding: 8px 16px;
+  margin-right: 10px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.tab.active {
+  background: #06a73b;
+  color: white;
+}
+
+#notificationList {
+  list-style: none;
+  padding: 0;
+}
+
+.notification {
+  background: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-left: 5px solid #1abc9c;
+  border-radius: 8px;
+}
+
+.notification.read {
+  opacity: 0.6;
+}
+
+.brand {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+aside {
+  font-family: sans-serif;
+  color: #0f2521;
+  font-weight: bold;
+}

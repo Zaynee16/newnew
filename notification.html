@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CraftConnect Notifications</title>
+    <link href="./notification.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <h2><span class="sp1">Craft</span><span class="sp2">Connect</span></h2>
+
+        <ul>
+          <li><span class="icon">🏠</span> Dashboard</li>
+          <li><span class="icon">💬</span> Message</li>
+          <li><span class="icon">📅</span> Booking</li>
+          <li><span class="icon">🖼️</span> Portfolio</li>
+          <li><span class="icon">⭐</span> Review</li>
+          <li><span class="icon">📊</span> Insight</li>
+        </ul>
+        <div class="bottom">
+          <div class="profile">👤 Profile</div>
+          <div class="notifications active">🔔 Notifications</div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <h1>Notification</h1>
+            <p>Stay updated with your latest notifications</p>
+          </div>
+          <div class="icons">
+            <span>🔍</span>
+            <span>🔔</span>
+            <span>⚙️</span>
+            <span>19th May 2022</span>
+            <img src="images/profile.jpeg" alt="User" class="profile-pic" />
+          </div>
+        </header>
+
+        <section class="notifications">
+          <div class="tabs">
+            <span>Sort: </span>
+            <button class="tab active" onclick="filterNotifications('all')">
+              All
+            </button>
+            <button class="tab" onclick="filterNotifications('read')">
+              Read
+            </button>
+            <button class="tab" onclick="filterNotifications('unread')">
+              Unread
+            </button>
+          </div>
+
+          <ul id="notificationList">
+            <!-- Notifications will be injected here -->
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <script src="notification.js"></script>
+  </body>
+</html>
