@@ -7,6 +7,9 @@ const notifications = [
   {
     title: "Profile Incomplete",
     message: "Complete your profile to increase your chances of getting hired.",
+    read: false,
+  showButton: true // this is our trigger!
+
   },
   { title: "New Message", message: "You have a new message from Gabriel." },
   {
@@ -51,6 +54,19 @@ logoIcon.forEach((logo) => {
 
 
 
+function completeProfile() {
+  alert("Redirecting to profile setup...");
+  // You can use: window.location.href = "/profile";
+}
+
+function completeProfile() {
+  alert("Redirecting to profile setup...");
+}
+
+function replyToMessage() {
+  alert("Opening message thread with Gabriel...");
+}
+
 function renderNotifications(filter = "all") {
   const list = document.getElementById("notificationList");
   list.innerHTML = "";
@@ -64,11 +80,25 @@ function renderNotifications(filter = "all") {
   filtered.forEach((n) => {
     const li = document.createElement("li");
     li.className = `notification ${n.read ? "read" : ""}`;
-    li.innerHTML = `<div class='profile-style'>
-            <img src="images/profile.jpeg" alt="User" class="profile-pic" />
 
-    <div><strong>${n.title}</strong><p>${n.message}</p></div>
-    </div>`;
+    let buttonHTML = "";
+    if (n.title === "Profile Incomplete") {
+      buttonHTML = `<button class="action-btn" onclick="completeProfile()">Complete Profile</button>`;
+    } else if (n.title === "New Message") {
+      buttonHTML = `<button class="action-btn" onclick="replyToMessage()">Tap to Reply</button>`;
+    }
+
+    li.innerHTML = `
+      <div class='profile-style'>
+        <img src="images/profile.jpeg" alt="User" class="profile-pic" />
+        <div>
+          <strong>${n.title}</strong>
+          <p>${n.message}</p>
+          ${buttonHTML}
+        </div>
+      </div>
+    `;
+
     list.appendChild(li);
   });
 }
@@ -87,6 +117,7 @@ document.querySelector('.icon-settings').addEventListener('click', () => {
 
 document.querySelector('.profile-pic').addEventListener('click', () => {
   alert('Profile page coming right up 👤');
+  
 });
 
 function filterNotifications(type) {

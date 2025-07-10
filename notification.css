@@ -208,6 +208,18 @@ align-items: center;
   transform: scale(1.1);
 }
 
+.action-btn {
+  margin-top: 6px;
+  padding: 6px 12px;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  color: black;
+  font-weight: bold;
+}
 @media screen and (max-width: 600px) {
   .topbar .icons {
     justify-content: center;
@@ -287,6 +299,7 @@ aside {
   font-weight: bold;
 }
 
+
 @media (max-width: 768px) {
 	.sidebar {
 		width: 300px;
@@ -304,9 +317,19 @@ aside {
 		z-index: 1000;
 	}
 
-	.topbar .icons span {
-		display: none;
-	}
+@media screen and (max-width: 600px) {
+  .topbar .icons {
+    justify-content: center;
+  }
+
+  .topbar .icons span {
+    font-size: 1rem;
+  }
+
+  .topbar .profile-pic {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 @media (max-width: 350px) {
@@ -314,4 +337,5 @@ aside {
 		width: 100%;
 		z-index: 1000;
 	}
+}
 }
